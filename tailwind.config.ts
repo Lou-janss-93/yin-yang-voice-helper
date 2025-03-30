@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,21 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Yin-Yang theme colors
+				yin: {
+					DEFAULT: '#1a365d', // Deep blue for emotional aspects
+					light: '#2c5282',
+					dark: '#0f2942',
+				},
+				yang: {
+					DEFAULT: '#dd6b20', // Warm orange for rational aspects
+					light: '#ed8936',
+					dark: '#c05621',
+				},
+				result: {
+					true: '#e53e3e', // Red for True (emergency)
+					false: '#38a169', // Green for False (non-emergency)
 				}
 			},
 			borderRadius: {
@@ -84,11 +100,16 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'pulse-recording': {
+					'0%, 100%': { opacity: '1' },
+					'50%': { opacity: '0.5' },
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'pulse-recording': 'pulse-recording 1.5s ease-in-out infinite',
 			}
 		}
 	},
